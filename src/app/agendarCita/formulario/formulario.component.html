@@ -1,0 +1,65 @@
+<div class="todo">
+    
+    <form class="form">
+        <p class="title">Agendar Cita </p>
+        <p class="message">Llene el formulario a continuacion</p>
+            <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>Nombre</span>
+            </label>
+    
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>Apellido</span>
+            </label>
+        </div>  
+                
+        <label>
+            <input required="" placeholder="" type="email" class="input">
+            <span>Correo Electronico</span>
+        </label> 
+            
+        <label>
+            <input required="" placeholder="" type="text" class="input">
+            <span>Telefono</span>
+        </label>
+        <label>
+            <input required="" placeholder="" type="number" class="input">
+            <span>Identificación</span>
+        </label>
+        <div class="container">
+            <form>
+                <p class="message">Tipo de cita</p>
+                <label>
+                    <input type="radio" (change)="deshabilitarEspecifica()" [(ngModel)]="tipoCita" name="radio" checked="">
+                    <span>General</span>
+                </label>
+                <label>
+                    <input type="radio" (change)="deshabilitarEspecifica()" [(ngModel)]="tipoCita" name="radio">
+                    <span>Especialista</span>
+                </label>
+                <label>
+                    <input type="radio" (change)="habilitarEspecifica()" [(ngModel)]="tipoCita" name="radio" >
+                    <span>Otro</span>
+                </label>
+            </form>
+        </div>
+
+        <label class="especificacion">
+            <input required="" placeholder="" type="text" class="input" id="especificacion" [disabled]="!especificaHabilitado">
+            <span>Especifique</span>
+        </label>
+        
+        <label class="fecha">
+            <input required="" placeholder="" type="date" class="input" id="fecha" [min]="fechaActual" >
+        </label>
+
+    
+        <form (ngSubmit)="enviarFormulario()">
+            <button type="submit">Enviar</button>
+          </form>
+    </form>
+
+</div>
+
