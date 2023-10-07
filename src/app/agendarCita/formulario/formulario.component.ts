@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FormularioComponent implements OnInit{
   especificaHabilitado: boolean = false;
-  @Output() formularioEnviado = new EventEmitter<any>();
+  @Output() formularioEnviado = new EventEmitter<any>()
   
   //datos del formulario
   nombre: string = ""
@@ -31,6 +32,7 @@ export class FormularioComponent implements OnInit{
   }
 
   enviarFormulario() {
+    
     // Realiza la lógica de procesamiento del formulario aquí
     const datosFormulario={
       nombre: this.nombre, 

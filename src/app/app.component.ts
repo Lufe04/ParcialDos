@@ -10,17 +10,16 @@ export class AppComponent {
 
   mostrarFormulario: boolean = true;
   mostrarConfirmacion: boolean = false;
-  datosDelFormulario: any = {};
+  datosDelFormulario: any 
 
   // Agrega una función para manejar el envío del formulario
   enviarFormulario(datos: any) {
-    // Aquí puedes realizar cualquier procesamiento necesario con los datos
+    // Asigna los datos del formulario a datosDelFormulario
+    console.log('Datos del formulario:', datos);
+    this.datosDelFormulario = datos;
   
   // Cambia la visibilidad de los componentes
-  this.mostrarFormulario = false;
-  this.mostrarConfirmacion = true;
-
-  // Asigna los datos del formulario a datosDelFormulario
-  this.datosDelFormulario = datos;
+    this.mostrarFormulario = false;
+   this.mostrarConfirmacion = true;
   }
 }

@@ -5,54 +5,54 @@
         <p class="message">Llene el formulario a continuacion</p>
             <div class="flex">
             <label>
-                <input required="" placeholder="" type="text" class="input">
+                <input required placeholder="" type="text" class="input" [(ngModel)]="nombre">
                 <span>Nombre</span>
             </label>
     
             <label>
-                <input required="" placeholder="" type="text" class="input">
+                <input required placeholder="" type="text" class="input" [(ngModel)]="apellido">
                 <span>Apellido</span>
             </label>
         </div>  
                 
         <label>
-            <input required="" placeholder="" type="email" class="input">
+            <input required placeholder="" type="email" class="input" [(ngModel)]="correo">
             <span>Correo Electronico</span>
         </label> 
             
         <label>
-            <input required="" placeholder="" type="text" class="input">
+            <input required placeholder="" type="number" class="input" [(ngModel)]="telefono">
             <span>Telefono</span>
         </label>
         <label>
-            <input required="" placeholder="" type="number" class="input">
+            <input required placeholder="" type="number" class="input" [(ngModel)]="id">
             <span>Identificación</span>
         </label>
         <div class="container">
             <form>
                 <p class="message">Tipo de cita</p>
                 <label>
-                    <input type="radio" (change)="deshabilitarEspecifica()" [(ngModel)]="tipoCita" name="radio" checked="">
+                    <input type="radio" (change)="deshabilitarEspecifica()" [(ngModel)]="tipoCita" name="tipoCita" value="General" requ>
                     <span>General</span>
                 </label>
                 <label>
-                    <input type="radio" (change)="deshabilitarEspecifica()" [(ngModel)]="tipoCita" name="radio">
+                    <input type="radio" (change)="deshabilitarEspecifica()" [(ngModel)]="tipoCita" name="tipoCita" value="Especialista">
                     <span>Especialista</span>
                 </label>
                 <label>
-                    <input type="radio" (change)="habilitarEspecifica()" [(ngModel)]="tipoCita" name="radio" >
+                    <input type="radio" (change)="habilitarEspecifica()" [(ngModel)]="tipoCita" name="tipoCita" value="Otro">
                     <span>Otro</span>
                 </label>
             </form>
         </div>
 
         <label class="especificacion">
-            <input required="" placeholder="" type="text" class="input" id="especificacion" [disabled]="!especificaHabilitado">
+            <input required placeholder="" type="text" class="input" id="especificacion" [disabled]="!especificaHabilitado">
             <span>Especifique</span>
         </label>
         
         <label class="fecha">
-            <input required="" placeholder="" type="date" class="input" id="fecha" [min]="fechaActual" >
+            <input required placeholder="" type="date" class="input" id="fecha" [min]="fechaActual" >
         </label>
 
     
