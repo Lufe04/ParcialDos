@@ -54,12 +54,11 @@
         <label class="fecha">
             <input required placeholder="" type="date" class="input" id="fecha" [min]="fechaActual" >
         </label>
-
+        <button class="submit" type="button" (click)="enviarFormulario()">Enviar</button>
+        
     
-        <form (ngSubmit)="enviarFormulario()">
-            <button type="submit">Enviar</button>
-          </form>
     </form>
+    
 
 </div>
 

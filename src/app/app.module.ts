@@ -4,8 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './agendarCita/formulario/formulario.component';
 import { ConfirmacionComponent } from './confirmacion/confirmacion.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule,Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: 'formulario', component: FormularioComponent },
+];
 
 @NgModule({
   declarations: [
@@ -17,8 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    RouterModule.forRoot(routes)
   ],
+
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
